@@ -44,5 +44,5 @@ workflows:
         - build-and-test
         - publish-docker:
             requires:
-              - bulid-and-test
+              - build-and-test
         
