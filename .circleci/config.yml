@@ -26,10 +26,10 @@ jobs:
           command: npm test
           working_directory: ./client
   publish-docker:
-   machine: true
-   steps:
-    - checkout
-    - run: echo "$DOCKER_PASS" | docker login -u "$DOCKER_USER" --password-stdin
+    machine: true
+    steps:
+      - checkout
+      - run: echo "$DOCKER_PASS" | docker login -u "$DOCKER_USER" --password-stdin
     - run:
         name: Docker publish server
         command: |
