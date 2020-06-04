@@ -31,12 +31,12 @@ jobs:
     - checkout
     - run: echo "$DOCKER_PASS" | docker login -u "$DOCKER_USER" --password-stdin
     - run:
-      name: Docker publish server
-      command: |
-      TAG=0.1.$CIRCLE_BUILD_NUM
-      docker build -t wanat123/node-react-cicd-server:$TAG .
-      docker push wanat123/node-react-cicd-server:$TAG
-     working_directory: ./server
+        name: Docker publish server
+        command: |
+          TAG=0.1.$CIRCLE_BUILD_NUM
+          docker build -t wanat123/node-react-cicd-server:$TAG .
+          docker push wanat123/node-react-cicd-server:$TAG
+        working_directory: ./server
      
 workflows:
     build-and-test:
