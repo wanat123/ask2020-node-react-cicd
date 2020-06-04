@@ -25,7 +25,7 @@ jobs:
           name: Running client tests
           command: npm test
           working_directory: ./client
- publish-docker:
+  publish-docker:
    machine: true
    steps:
     - checkout
